@@ -1,0 +1,35 @@
+Как работать с репозиторием MeetSync?
+
+Что нужно:
+- Git на компьютере
+- Аккаунт GitHub
+- Доступ к репозиторию (приглашение от администратора)
+
+Шаги:
+
+1. Склонировать репозиторий (один раз):
+   git clone https://github.com/ТВОЙ-USERNAME/meetsync.git
+   cd meetsync
+
+2. Переключиться на ветку test:
+   git checkout test
+   git pull origin test
+
+3. Создать свою ветку под задачу:
+   git checkout -b feature/название-задачи
+
+4. Внести изменения, сохранить файлы.
+
+5. Закоммитить:
+   git add .
+   git commit -m "Краткое описание изменения"
+
+6. Отправить на GitHub:
+   git push origin feature/название-задачи
+
+7. На GitHub создать Pull Request из своей ветки в test
+   (Pull requests → New pull request → base: test ← compare: твоя ветка).
+
+8. После проверки изменения сливаются в test.
+   Из test в main изменения попадают только после проверки DevOps.
+   Прямые изменения в main запрещены.
