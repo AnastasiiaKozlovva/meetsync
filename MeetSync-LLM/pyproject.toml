@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meetsync-llm"
+version = "0.1.0"
+description = "MeetSync LLM integration module"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "groq>=0.18.0",
+    "pydantic>=2.0.0",
+    "tzdata>=2024.1",
+]
