@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:18
+    container_name: meetsync-db
+    environment:
+      POSTGRES_USER: meetsync
+      POSTGRES_PASSWORD: devpassword
+      POSTGRES_DB: meetsync
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - meetsync-data:/var/lib/postgresql
+      # Runs once, on the first start with an empty volume, and creates all tables
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+
+volumes:
+  meetsync-data:
